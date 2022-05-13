@@ -11,6 +11,10 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,9 +22,9 @@
       <div class="로고-제목">TypingTest</div>
       <div class="본문-컨테이너">
         <div class="문제개수-컨테이너">
-          <div class="이전버튼"><</div>
+          <div class="이전버튼 material-icons-outlined">arrow_back</div>
           <div class="문제개수">총 5문제</div>
-          <div class="다음버튼">></div>
+          <div class="다음버튼 material-icons-outlined">arrow_forward</div>
         </div>
         <div class="점수판">
           <div class="점수 진행도">진행도 : 0</div>
@@ -41,6 +45,7 @@
         </div>
       </div>
       <p class="크레딧">Developed By RiAXO</p>
+
       <!-- Button trigger modal -->
       <button
         type="button"
@@ -58,16 +63,10 @@
         aria-labelledby="helpmodalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="helpmodalLabel">Help & Cotact</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div class="modal-body">
               <p>심플한 타이핑 테스트게임입니다.</p>
@@ -87,6 +86,17 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="dark-container">
+        <div class="form-check form-switch dark-btn">
+          <input
+            class="form-check-input dark-tg"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+          />
+        </div>
+        <div class="dark-text">Dark Mode</div>
       </div>
     </div>
     <script
