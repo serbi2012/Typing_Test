@@ -13,12 +13,17 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  font-size: 20px;
+  font-size: 2.2vmin;
 }
 
 .메인-컨테이너 {
-  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -29,16 +34,16 @@ html {
 
 .로고-제목 {
   font-family: "Yeongdo-Rg";
-  font-size: 5rem;
+  font-size: 13vmin;
   color: rgb(255, 255, 255);
   user-select: none;
 }
 
 .본문-컨테이너 {
-  height: 40%;
-  width: 60%;
-  border: solid 5px #ddd;
-  border-radius: 5px;
+  height: 40vmin;
+  width: 100vmin;
+  border: solid 0.8vmin #ddd;
+  border-radius: 1vmin;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -47,9 +52,9 @@ html {
 
 .점수판 {
   position: absolute;
-  transform: translateY(-17vh);
-  width: 42%;
-  height: 4%;
+  transform: translateY(-17vmin);
+  width: 70vmin;
+  height: 4vmin;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,41 +62,56 @@ html {
 }
 
 .점수 {
-  width: 50%;
-  height: 150%;
-  border: 3px solid #ddd;
+  width: 25vmin;
+  height: 5.5vmin;
+  border: 0.8vmin solid #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: ease-in-out 0.2s;
 }
 
 .진행도 {
   color: aliceblue;
+  border-bottom-left-radius: 2vmin;
 }
 
 .성공 {
   color: rgb(218, 255, 162);
 }
 
+.성공-tr {
+  background-color: rgb(218, 255, 162);
+  color: aliceblue;
+  transition: ease-in-out 0.3s;
+}
+
 .실패 {
   color: rgb(255, 158, 158);
+  border-bottom-right-radius: 2vmin;
+}
+
+.실패-tr {
+  background-color: rgb(255, 158, 158);
+  color: aliceblue;
+  transition: ease-in-out 0.3s;
 }
 
 .다음예제-컨테이너 {
-  width: 70%;
+  width: 75vmin;
 }
 
 .타이핑-예제 {
   font-family: "LeeSeoyun";
-  width: 70%;
-  padding-left: 0.2rem;
+  width: 75vmin;
+  padding-left: 0.3vmin;
   color: aliceblue;
   user-select: none;
 }
 
 .타이핑-답안 {
   font-family: "LeeSeoyun";
-  width: 70%;
+  width: 75vmin;
   background-color: rgba(240, 248, 255, 0);
   border: none;
   border-bottom: solid 5px rgb(36, 36, 36);
@@ -111,18 +131,18 @@ html {
 
 .다음 {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 2.7vmin;
 }
 
 .크레딧 {
   position: absolute;
   top: 96vh;
   color: rgba(240, 248, 255, 0.349);
-  font-size: 0.7rem;
+  font-size: 1vmin;
 }
 
 .오타 {
-  color: red;
+  color: rgb(241, 101, 101);
 }
 
 #exampleModalLabel {
@@ -134,10 +154,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 13%;
-  height: 4.5%;
-  transform: translateY(17.5vh);
-  border: 3px solid #ddd;
+  width: 22vmin;
+  height: 5vmin;
+  border-start-end-radius: 2vmin;
+  border-top-left-radius: 2vmin;
+  transform: translateY(17.5vmin);
+  border: 0.8vmin solid #ddd;
   color: aliceblue;
   text-align: center;
 }
@@ -146,16 +168,76 @@ html {
 .다음버튼 {
   cursor: pointer;
   font-weight: bolder;
+  transition: ease-in-out 0.2s;
+  border-radius: 1vmin;
+  font-size: 3vmin;
+}
+
+.이전버튼:hover,
+.다음버튼:hover {
+  background-color: aliceblue;
+  color: black;
 }
 
 .help-btn {
   position: absolute;
-  right: 2vw;
-  bottom: 2vh;
+  right: 2vmin;
+  bottom: 2vmin;
   background-color: rgba(0, 0, 0, 0.418);
   border: none;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
+  border-radius: 6vmin;
+  height: 5vmin;
+  width: 5vmin;
   padding: 0;
+}
+
+.help-btn:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.dark-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 6vw;
+  bottom: 0.5vh;
+  height: 60px;
+}
+
+.dark-btn {
+  font-size: 1.4rem;
+  transform: translateX(0.4vw);
+  filter: brightness(80%);
+}
+
+.dark-text {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: rgba(240, 248, 255, 0.349);
+}
+
+.modal-title {
+  width: 100vmin;
+  font-size: 4vmin;
+  font-weight: bolder;
+}
+
+.esc-img {
+  height: 5vmin;
+}
+
+.result-modal {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    html {
+      font-size: 1.3rem;
+    }
+  }
 }
